@@ -1,0 +1,20 @@
+import flixel.FlxG;
+import funkin.play.stage.Stage;
+
+class GarcelloAlleyAltStage extends Stage
+{
+    function new() {
+        super('garcelloAlleyAlt');
+    }
+
+    function buildStage() {
+        super.buildStage();
+
+        if (FlxG.onMobile) {
+            var dummySmoker = getNamedProp('smoker2');
+            dummySmoker.scale.set(2.0, 2.0);
+            dummySmoker.updateHitbox();
+            dummySmoker.setPosition(-600, -530);
+        }
+    }
+}

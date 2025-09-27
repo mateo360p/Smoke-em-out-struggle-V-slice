@@ -37,6 +37,7 @@ class GarcelloHeadacheSong extends Song {
         var introText:FunkinSprite = new FunkinSprite(0, 0).loadTexture('garcelloStage/garIntroText');
         introText.setGraphicSize(Std.int(introText.width * 1.5));
         introText.scrollFactor.set();
+        introText.screenCenter();
         introText.cameras = [PlayState.instance.camCutscene];
         introText.zIndex = 10000; // Huh
         introText.alpha = 0;
