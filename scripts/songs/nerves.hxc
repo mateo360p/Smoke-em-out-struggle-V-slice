@@ -1,0 +1,49 @@
+import flixel.FlxG;
+import funkin.play.PlayState;
+import funkin.play.song.Song;
+import funkin.play.PlayStatePlaylist;
+import funkin.audio.FunkinSound;
+
+class GarcelloNervesSong extends Song {
+    var hasPlayedCutscene:Bool;
+
+    public function new() {
+        super('nerves');
+    }
+
+    function onCreate(event:ScriptEvent):Void {
+        super.onCreate(event);
+
+        hasPlayedCutscene = false;
+    }
+
+    public function onCountdownStart(event:CountdownScriptEvent):Void {
+        super.onCountdownStart(event);
+
+        if (!PlayStatePlaylist.isStoryMode) return;
+
+        if (PlayState.instance.isChartingMode) return;
+
+        if (hasPlayedCutscene) return;
+
+        hasPlayedCutscene = true;
+        event.cancel(); // CANCEL THE COUNTDOWN!
+
+        startDialogue();
+    }
+
+    function onSongRetry(event:ScriptEvent) {
+        super.onSongRetry(event);
+
+        hasPlayedCutscene = true;
+    }
+
+    function startDialogue() {
+        FunkinSound.playOnce(Paths.sound('garWeak'));
+        PlayState.instance.startConversation('nerves');
+    }
+
+    public override function onDialogueEnd() {
+        Countdown.performCountdown();
+    }
+}

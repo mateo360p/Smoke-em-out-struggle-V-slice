@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "name": "GARCELLO WEEK ALBUM",
+  "artists": [
+    "atsuover",
+    "Rageminer"
+  ],
+  "albumArtAsset": "freeplay/albumRoll/garcello_album",
+  "albumTitleAsset": "freeplay/albumRoll/garcello-text"
+}

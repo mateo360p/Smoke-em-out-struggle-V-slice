@@ -1,0 +1,27 @@
+{
+    "version": "1.1.0",
+    "name": "Smoke 'Em Out Struggle Box (Green Text)",
+    "assetPath": "dialogue/garBox",
+    "isPixel": true,
+    "flipX": false,
+    "flipY": false,
+    "offsets": [-20, 20],
+    "scale": 5.4,
+
+    "text": {
+        "offsets": [225, 450],
+        "width": 800,
+        "color": "#0DF07E",
+        "fontFamily": "Pixel Arial 11 Bold",
+        "shadowColor": "#000000",
+        "shadowWidth": 2
+    },
+
+    "animations": [
+        {
+            "name": "idle",
+            "prefix": "Spirit Textbox spawn instance 10000",
+            "offsets": [0, 0]
+        }
+    ]
+}

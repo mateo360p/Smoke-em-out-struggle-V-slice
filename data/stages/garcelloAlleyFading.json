@@ -1,0 +1,64 @@
+{
+    "props": [
+        {
+            "danceEvery": 0,
+            "name": "bg",
+            "zIndex": 10,
+            "position": [-700, -170],
+            "scale": [1, 1],
+            "animType": "sparrow",
+            "isPixel": false,
+            "assetPath": "garcelloStage/garStagebgRise",
+            "scroll": [0.7, 0.7],
+            "alpha": 1,
+            "animations": []
+        },
+        {
+            "danceEvery": 0,
+            "name": "alley",
+            "zIndex": 20,
+            "position": [-780, -200],
+            "scale": [1, 1],
+            "animType": "sparrow",
+            "isPixel": false,
+            "assetPath": "garcelloStage/garStageRise",
+            "scroll": [0.9, 0.9],
+            "alpha": 1,
+            "animations": []
+        },
+        {
+            "danceEvery": 0,
+            "name": "garcelloded",
+            "zIndex": 25,
+            "position": [-450, 600],
+            "scale": [1, 1],
+            "animType": "sparrow",
+            "isPixel": false,
+            "assetPath": "garcelloStage/gardead",
+            "scroll": [0.9, 0.9],
+            "alpha": 1,
+            "animations": []
+        }
+    ],
+    "cameraZoom": 0.9,
+    "version": "1.0.0",
+    "characters": {
+        "bf": {
+            "zIndex": 400,
+            "position": [850, 900],
+            "cameraOffsets": [-150, -100]
+        },
+        "gf": {
+            "zIndex": 300,
+            "position": [550, 800],
+            "cameraOffsets": [0, -100]
+        },
+        "dad": {
+            "zIndex": 350,
+            "position": [250, 900],
+            "cameraOffsets": [150, -100]
+        }
+    },
+    "name": "Garcello Alley (Fading Stage)",
+    "directory": ""
+}

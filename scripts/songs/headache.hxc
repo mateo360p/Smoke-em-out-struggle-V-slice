@@ -1,0 +1,87 @@
+import flixel.FlxG;
+import funkin.graphics.FunkinSprite;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import funkin.audio.FunkinSound;
+import funkin.play.PlayState;
+import funkin.play.PlayStatePlaylist;
+import funkin.play.song.Song;
+
+class GarcelloHeadacheSong extends Song {
+    var hasPlayedCutscene:Bool;
+
+    public function new() {
+        super('headache');
+    }
+
+    function onCreate(event:ScriptEvent):Void {
+        super.onCreate(event);
+
+        FlxG.camera.visible = false;
+        hasPlayedCutscene = false;
+    }
+
+    public function onCountdownStart(event:CountdownScriptEvent):Void {
+        super.onCountdownStart(event);
+
+        if (!PlayStatePlaylist.isStoryMode || PlayState.instance.isChartingMode || hasPlayedCutscene) {
+            FlxG.camera.visible = true;
+            return;
+        }
+
+        PlayState.instance.camHUD.visible = false;
+        hasPlayedCutscene = true;
+        event.cancel(); // CANCEL THE COUNTDOWN!
+
+        var introText:FunkinSprite = new FunkinSprite(0, 0).loadTexture('garcelloStage/garIntroText');
+        introText.setGraphicSize(Std.int(introText.width * 1.5));
+        introText.scrollFactor.set();
+        introText.cameras = [PlayState.instance.camCutscene];
+        introText.zIndex = 10000; // Huh
+        introText.alpha = 0;
+
+        PlayState.instance.add(introText);
+
+        var daCityAmbience:FunkinSound = new FunkinSound().loadEmbedded(Paths.music('city_ambience'));
+        daCityAmbience.volume = 0;
+        daCityAmbience.play();
+        daCityAmbience.fadeIn(1, 0, 0.8);
+
+        new FlxTimer().start(0.5, function(tmr:FlxTimer)
+        {
+            FlxTween.tween(introText, {alpha: 1}, 0.2);
+            new FlxTimer().start(6, function(tmr:FlxTimer)
+            {
+                FlxG.camera.alpha = 0;
+                FlxG.camera.visible = true;
+                FlxTween.tween(introText, {alpha: 0}, 0.5, {onComplete : function(twn:FlxTween) {
+                    FlxTween.tween(FlxG.camera, {alpha: 1}, 2.5, { // looks, weird, but imo it's "better" than a black BG 
+                        ease: FlxEase.quadInOut,
+                        onComplete: function(twn:FlxTween)
+                        {
+                            daCityAmbience.fadeOut(2.2, 0);
+                            PlayState.instance.currentStage.remove(introText);
+                            startDialogue();
+                        }
+                    });
+                }});
+            });
+        });
+    }
+
+    function startDialogue() {
+        PlayState.instance.startConversation('headache');
+    }
+
+    public override function onDialogueEnd() {
+        Countdown.performCountdown();
+    }
+
+    function onSongRetry(event:ScriptEvent) {
+        super.onSongRetry(event);
+
+        FlxG.camera.visible = true; // just in case
+        hasPlayedCutscene = true;
+    }
+}

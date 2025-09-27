@@ -1,0 +1,153 @@
+{
+    "version": "1.0.0",
+
+    "backdrop": {
+        "type": "solid",
+        "fadeTime": 2.0,
+        "color": "#BFB3DFD8"
+    },
+
+    "music": {
+        "asset": "",
+        "fadeTime": 0,
+        "looped": false
+    },
+
+    "outro": {
+        "type": "fade",
+        "fadeTime": 1.0
+    },
+
+    "dialogue": [
+        {
+            "speaker": "garcello_bf",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["beep"]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["What's up, little man?"]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Did the smoke catch your attention?"]
+        },
+        {
+            "speaker": "garcello_bf",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["bee bop"]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Yeah, it's pretty cool. You should try it out."]
+        },
+        {
+            "speaker": "garcello_bf",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["beep bo"]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Are ya sure? Come on..."]
+        },
+        {
+            "speaker": "garcello_bf",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["beep bo"]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Hm..."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Tell you what."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": [
+                "If you beat me in a friendly little rap battle, I'll get off your case."
+            ]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Sound cool, little man?"]
+        },
+        {
+            "speaker": "garcello_bf",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["beep bo bop!"]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Heh, that got you hyped up. It's settled then."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["As long as you don't mind me smoking a bit. "]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Helps calm the nerves, y'know?"]
+        }
+    ]
+}

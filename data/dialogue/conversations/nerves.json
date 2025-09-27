@@ -1,0 +1,121 @@
+{
+    "version": "1.0.0",
+
+    "backdrop": {
+        "type": "solid",
+        "fadeTime": 2.0,
+        "color": "#BFB3DFD8"
+    },
+
+    "music": {
+        "asset": "",
+        "fadeTime": 0,
+        "looped": false
+    },
+
+    "outro": {
+        "type": "fade",
+        "fadeTime": 1.0
+    },
+
+    "dialogue": [
+        {
+            "speaker": "garcello_bf",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["beep bop!"]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkNervous",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Hhh..."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkNervous",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Hey."]
+        },
+        {
+            "speaker": "garcello_bf",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["ski boop?"]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkNervous",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["That was fun, but... my chest is starting to feel funny."]
+        },
+        {
+            "speaker": "garcello_bf",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["beep...?"]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkNervous",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": [
+                "I-I'm not giving up just yet though. You've got some tight bars, little man."
+            ]
+        },
+        {
+            "speaker": "garcello_bf",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["bee bo ski bop!"]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkNervous",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Oh? You want me to keep going?"]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkNervous",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["F-Fine by me. I'm enjoying this actually."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkNervous",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["One more couldn't hurt... "]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkNervous",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["...Right?"]
+        }
+    ]
+}

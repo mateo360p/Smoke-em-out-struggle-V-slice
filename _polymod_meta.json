@@ -1,0 +1,15 @@
+{
+  "title": "Smoke 'Em Out Struggle - V-Slice Port [v1.0.0]",
+  "description": "idk",
+  "author": "Dipazio",
+  "contributors": [
+    {
+      "name": "Dipazio",
+      "role": "Mod porter: coding, artist, etc",
+      "url": "https://github.com/mateo360p"
+    }
+  ],
+  "api_version": "0.7.3",
+  "mod_version": "1.0.0",
+  "license": "Apache-2.0"
+}
