@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="garcello-expansion-text.png">
+	<!-- Created with Adobe Animate version 20.5.1.31044 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="switch0000" x="5" y="5" width="231" height="147" frameX="-15" frameY="10" frameWidth="231" frameHeight="154"/>
+	<SubTexture name="switch0001" x="5" y="5" width="231" height="147" frameX="-15" frameY="10" frameWidth="231" frameHeight="154"/>
+	<SubTexture name="switch0002" x="5" y="5" width="231" height="147" frameX="-15" frameY="10" frameWidth="231" frameHeight="154"/>
+	<SubTexture name="switch0003" x="5" y="5" width="231" height="147" frameX="-15" frameY="10" frameWidth="231" frameHeight="154"/>
+	<SubTexture name="idle0000" x="239" y="5" width="231" height="147" frameX="-15" frameY="3" frameWidth="231" frameHeight="154"/>
+	<SubTexture name="idle0001" x="239" y="5" width="231" height="147" frameX="-15" frameY="3" frameWidth="231" frameHeight="154"/>
+	<SubTexture name="idle0002" x="239" y="5" width="231" height="147" frameX="-15" frameY="3" frameWidth="231" frameHeight="154"/>
+	<SubTexture name="idle0003" x="239" y="5" width="231" height="147" frameX="-15" frameY="3" frameWidth="231" frameHeight="154"/>
+	<SubTexture name="idle0004" x="239" y="5" width="231" height="147" frameX="-15" frameY="3" frameWidth="231" frameHeight="154"/>
+	<SubTexture name="idle0005" x="239" y="5" width="231" height="147" frameX="-15" frameY="3" frameWidth="231" frameHeight="154"/>
+	<SubTexture name="idle0006" x="239" y="5" width="231" height="147" frameX="-15" frameY="3" frameWidth="231" frameHeight="154"/>
+	<SubTexture name="idle0007" x="239" y="5" width="231" height="147" frameX="-15" frameY="3" frameWidth="231" frameHeight="154"/>
+	<SubTexture name="idle0008" x="239" y="5" width="231" height="147" frameX="-15" frameY="3" frameWidth="231" frameHeight="154"/>
+	<SubTexture name="idle0009" x="239" y="5" width="231" height="147" frameX="-15" frameY="3" frameWidth="231" frameHeight="154"/>
+</TextureAtlas>

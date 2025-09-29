@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "name": "GARCELLO EXPANSION SONGS ALBUM",
+  "artists": [
+    "Pink Lemonade",
+    "Plantgamer09"
+  ],
+  "albumArtAsset": "freeplay/albumRoll/garcello_expansion_album",
+  "albumTitleAsset": "freeplay/albumRoll/garcello-expansion-text"
+}

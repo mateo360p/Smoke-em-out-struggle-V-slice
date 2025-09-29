@@ -9,11 +9,16 @@ class CoughNote extends NoteKind {
 	}
 
 	function onNoteHit(event:HitNoteScriptEvent) {
+		var daDud;
 		// THIS SYSTEM IS AWFUL, WHY IS THIS LIKE, THIS!? IT'S HORRIBLE
-		//if (event.note.noteData.getMustHitNote()) return;
+		if (event.note.noteData.getMustHitNote()) {
+			daDud = PlayState.instance.currentStage.getBoyfriend();
+		} else {
+			daDud = PlayState.instance.currentStage.getDad();
+		}
 
 		new FlxTimer().start(0, function(_) { // idik why but it needs this-
-			PlayState.instance.currentStage.getDad().playAnimation("cough", true);
+			daDud.playAnimation("cough", true);
 		});
 	}
 }

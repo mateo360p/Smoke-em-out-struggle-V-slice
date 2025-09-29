@@ -1,0 +1,62 @@
+{
+  "version": "2.2.4",
+  "songName": "Headache (Pico Mix)",
+  "artist": "Pink Lemonade",
+  "charter": "Dipazio",
+  "divisions": 96,
+  "looped": false,
+  "offsets": {
+    "instrumental": 0,
+    "altInstrumentals": {    },
+    "vocals": {    },
+    "altVocals": {    }
+  },
+  "playData": {
+    "songVariations": [    ],
+    "difficulties": [
+      "easy",
+      "normal",
+      "hard"
+    ],
+    "characters": {
+      "player": "pico-garcello-smoking",
+      "girlfriend": "nene",
+      "opponent": "garcello",
+      "instrumental": "pico",
+      "altInstrumentals": [      ],
+      "opponentVocals": [
+        "garcello"
+      ],
+      "playerVocals": [
+        "pico-garcello-smoking"
+      ]
+    },
+    "stage": "garcelloAlley",
+    "noteStyle": "funkin",
+    "ratings": {
+      "easy": 3,
+      "hard": 5,
+      "normal": 4
+    },
+    "album": "garcello-expansion",
+    "previewStart": 0,
+    "previewEnd": 15000
+  },
+  "generatedBy": "Friday Night Funkin' - v0.7.5",
+  "timeFormat": "ms",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 120,
+      "n": 4,
+      "d": 4,
+      "bt": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  ]
+}

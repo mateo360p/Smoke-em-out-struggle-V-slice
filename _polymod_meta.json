@@ -1,15 +1,25 @@
 {
-  "title": "Smoke 'Em Out Struggle - V-Slice Port [v1.0.0]",
-  "description": "idk",
+  "title": "Smoke 'Em Out Struggle - V-Slice Port [v2.0.0]",
+  "description": "",
   "author": "Dipazio",
   "contributors": [
     {
       "name": "Dipazio",
       "role": "Mod porter: coding, artist, etc",
       "url": "https://github.com/mateo360p"
+    },
+    {
+      "name": "Pink Lemonade",
+      "role": "Headache (Pico Mix) Song",
+      "url": "https://gamebanana.com/members/1798934"
+    },
+    {
+      "name": "Plantgamer09",
+      "role": "Nerves (Pico Mix) Song",
+      "url": "https://gamebanana.com/members/2166559"
     }
   ],
   "api_version": "0.7.5",
-  "mod_version": "1.0.0",
+  "mod_version": "2.0.0",
   "license": "Apache-2.0"
 }
