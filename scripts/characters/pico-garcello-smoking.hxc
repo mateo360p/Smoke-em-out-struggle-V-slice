@@ -88,17 +88,15 @@ class PicoGarcelloSmokingCharacter extends MultiSparrowCharacter
     // Override the hit note animation.
     switch (event.note.kind)
     {
+      case "garcello-cough":
+        if (event.note.noteData.getMustHitNote()) {
+          holdTimer = 0;
+          this.playAnimation("cough", true);
+          return;
+        }
       case "hey":
         holdTimer = 0;
         this.playAnimation('hey', true, true);
-        return;
-      case "cheer":
-        holdTimer = 0;
-        this.playAnimation('cheer', true, true);
-        return;
-      case "censor":
-        holdTimer = 0;
-        this.playSingAnimation(event.note.noteData.getDirection(), false, 'censor');
         return;
       default:
         super.onNoteHit(event);
