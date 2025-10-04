@@ -1,0 +1,158 @@
+{
+    "version": "1.0.0",
+
+    "backdrop": {
+        "type": "solid",
+        "fadeTime": 2.0,
+        "color": "#BFB3DFD8"
+    },
+
+    "music": {
+        "asset": "",
+        "fadeTime": 0,
+        "looped": false
+    },
+
+    "outro": {
+        "type": "fade",
+        "fadeTime": 1.0
+    },
+
+    "dialogue": [
+        {
+            "speaker": "garcello_pico",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Hey."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["What's up, little man?"]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Did the smoke catch your attention?"]
+        },
+        {
+            "speaker": "garcello_pico",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Yeah, that looks good."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Yeah, it's pretty cool. You should try it out."]
+        },
+        {
+            "speaker": "garcello_pico",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Pass it here man."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Haha, sure kid. Here you go."]
+        },
+        {
+            "speaker": "garcello_pico",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Ahh, not bad."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Hey, tough kid."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Tell you what."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["If you beat me in a friendly little rap battle..."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["I'll get you a whole pack of these."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Sound cool, little man?"]
+        },
+        {
+            "speaker": "garcello_pico",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["You're on."]
+        },
+        {
+            "speaker": "garcello_pico",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Hope you can keep up, old man."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Heh, that got you hyped up."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+            "text": ["It's settled then."]
+        }
+    ]
+}

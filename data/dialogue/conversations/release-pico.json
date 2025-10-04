@@ -1,0 +1,110 @@
+{
+    "version": "1.0.0",
+
+    "backdrop": {
+        "type": "solid",
+        "fadeTime": 2.0,
+        "color": "#BFB3DFD8"
+    },
+
+    "music": {
+        "asset": "",
+        "fadeTime": 0,
+        "looped": false
+    },
+
+    "outro": {
+        "type": "fade",
+        "fadeTime": 1.0
+    },
+
+    "dialogue": [
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkGhost",
+            "box": "garcello-ded",
+            "boxAnimation": "idle",
+
+            "text": ["Oh."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkGhost",
+            "box": "garcello-ded",
+            "boxAnimation": "idle",
+
+            "text": ["..."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkGhost",
+            "box": "garcello-ded",
+            "boxAnimation": "idle",
+
+            "text": ["Would ya look at that."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkGhost",
+            "box": "garcello-ded",
+            "boxAnimation": "idle",
+
+            "text": ["I guess I overdid it, huh?"]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkGhost",
+            "box": "garcello-ded",
+            "boxAnimation": "idle",
+
+            "text": ["..."]
+        },
+        {
+            "speaker": "garcello_pico",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+            "text": ["Ehh... yeah, I'm just...", " dropping this down", " now."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkGhost",
+            "box": "garcello-ded",
+            "boxAnimation": "idle",
+
+            "text": ["Heh, It's alright."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkGhost",
+            "box": "garcello-ded",
+            "boxAnimation": "idle",
+
+            "text": ["I'd rather it be me than you."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkGhost",
+            "box": "garcello-ded",
+            "boxAnimation": "idle",
+
+            "text": ["I can't stay like this for too long, but..."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkGhost",
+            "box": "garcello-ded",
+            "boxAnimation": "idle",
+
+            "text": ["Even if our time was short..."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkGhost",
+            "box": "garcello-ded",
+            "boxAnimation": "idle",
+
+            "text": ["Let's end things off with a bang, little man."]
+        }
+    ]
+}

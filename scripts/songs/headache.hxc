@@ -25,7 +25,9 @@ class GarcelloHeadacheSong extends Song {
     public function onCountdownStart(event:CountdownScriptEvent):Void {
         super.onCountdownStart(event);
 
-        if (!PlayStatePlaylist.isStoryMode || PlayState.instance.isChartingMode || hasPlayedCutscene) {
+        var isPico = (PlayState.instance.currentVariation == 'pico');
+
+        if (!(PlayStatePlaylist.isStoryMode || isPico) || PlayState.instance.isChartingMode || hasPlayedCutscene) {
             FlxG.camera.visible = true;
             return;
         }
@@ -34,8 +36,8 @@ class GarcelloHeadacheSong extends Song {
         hasPlayedCutscene = true;
         event.cancel(); // CANCEL THE COUNTDOWN!
 
-        var introText:FunkinSprite = new FunkinSprite(0, 0).loadTexture('garcelloStage/garIntroText');
-        introText.setGraphicSize(Std.int(introText.width * 1.5));
+        var introText:FunkinSprite = new FunkinSprite(0, 0).loadTexture('garcelloStage/garIntroText' + (isPico ? "Pickaxe" : ""));
+        introText.setGraphicSize(Std.int(FlxG.width));
         introText.scrollFactor.set();
         introText.screenCenter();
         introText.cameras = [PlayState.instance.camCutscene];
@@ -52,7 +54,7 @@ class GarcelloHeadacheSong extends Song {
         new FlxTimer().start(0.5, function(tmr:FlxTimer)
         {
             FlxTween.tween(introText, {alpha: 1}, 0.2);
-            new FlxTimer().start(6, function(tmr:FlxTimer)
+            new FlxTimer().start(isPico ? 4 : 6, function(tmr:FlxTimer)
             {
                 FlxG.camera.alpha = 0;
                 FlxG.camera.visible = true;
@@ -63,7 +65,7 @@ class GarcelloHeadacheSong extends Song {
                         {
                             daCityAmbience.fadeOut(2.2, 0);
                             PlayState.instance.currentStage.remove(introText);
-                            startDialogue();
+                            startDialogue(isPico);
                         }
                     });
                 }});
@@ -71,7 +73,11 @@ class GarcelloHeadacheSong extends Song {
         });
     }
 
-    function startDialogue() {
+    function startDialogue(ispickaxe:Bool) {
+        if (ispickaxe) {
+            PlayState.instance.startConversation('headache-pico');
+            return;
+        }
         PlayState.instance.startConversation('headache');
     }
 

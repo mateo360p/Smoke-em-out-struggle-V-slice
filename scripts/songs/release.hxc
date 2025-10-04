@@ -22,7 +22,9 @@ class GarcelloReleaseSong extends Song {
     public function onCountdownStart(event:CountdownScriptEvent):Void {
         super.onCountdownStart(event);
 
-        if (!PlayStatePlaylist.isStoryMode) {
+        var isPico = (PlayState.instance.currentVariation == 'pico');
+
+        if (!(PlayStatePlaylist.isStoryMode || isPico)) {
             hasPlayedCutscene = true;
         }
 
@@ -34,7 +36,7 @@ class GarcelloReleaseSong extends Song {
 
             hasPlayedCutscene = true;
 
-            startCutscene();
+            startCutscene(isPico);
             event.cancel(); // CANCEL THE COUNTDOWN!
         }
         else {
@@ -42,7 +44,7 @@ class GarcelloReleaseSong extends Song {
         }
     }
 
-    function startCutscene() {
+    function startCutscene(isPico:Bool) {
         trace('Hit start of song! Starting cutscene.');
 
         PlayState.instance.disableKeys = true;
@@ -55,6 +57,7 @@ class GarcelloReleaseSong extends Song {
         {
             FlxG.camera.visible = true;
             PlayState.instance.currentStage.remove(daVideo);
+            daVideo.destroy();
 
             FunkinSound.playOnce(Paths.sound('Wind_Fadeout'), 1.0);
             FlxG.camera.flash(0xFFE3FFEF, 5, () -> startDialogue(), true);
@@ -70,11 +73,12 @@ class GarcelloReleaseSong extends Song {
 
 		PlayState.instance.currentStage.add(daVideo);
 
-        if (daVideo.load(Paths.videos('garcelloDies'))) {
+        if (daVideo.load(Paths.videos('garcelloDies' + (isPico ? "Picazio" : "")))) {
             daVideo.cameras = [PlayState.instance.camCutscene];
             daVideo.play();
         } else { // idk, just in case
             PlayState.instance.currentStage.remove(daVideo);
+            daVideo.destroy();
             FlxG.camera.visible = true;
             startDialogue();
         }
@@ -87,6 +91,10 @@ class GarcelloReleaseSong extends Song {
 
     function startDialogue() {
         PlayState.instance.disableKeys = false;
+        if (PlayState.instance.currentVariation == 'pico') {
+            PlayState.instance.startConversation('release-pico');
+            return;
+        }
         PlayState.instance.startConversation('release');
     }
 

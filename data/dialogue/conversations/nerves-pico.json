@@ -1,0 +1,145 @@
+{
+    "version": "1.0.0",
+
+    "backdrop": {
+        "type": "solid",
+        "fadeTime": 2.0,
+        "color": "#BFB3DFD8"
+    },
+
+    "music": {
+        "asset": "",
+        "fadeTime": 0,
+        "looped": false
+    },
+
+    "outro": {
+        "type": "fade",
+        "fadeTime": 1.0
+    },
+
+    "dialogue": [
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkNervous",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Hhh..."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkNervous",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Hey."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkNervous",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["That was fun, but..."]
+        },
+        {
+            "speaker": "garcello_pico",
+            "speakerAnimation": "uhh",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Uh. You good, man?"]
+        },
+        {
+            "speaker": "garcello_pico",
+            "speakerAnimation": "uhhh",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["You're looking pale."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkNervous",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["It's just, my chest is starting to feel funny."]
+        },
+        {
+            "speaker": "garcello_pico",
+            "speakerAnimation": "uhhh",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Sit down if you need to."]
+        },
+        {
+            "speaker": "garcello_pico",
+            "speakerAnimation": "uhhh",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["I'm not going anywhere."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkNervous",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": [
+                "I-I'm not giving up just yet though. You've got some tight bars, little man."
+            ]
+        },
+        {
+            "speaker": "garcello_pico",
+            "speakerAnimation": "talk",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Heh, thanks. Still got gas for another round?"]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkNervous",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["Oh? You want me to keep going?"]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkNervous",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["F-Fine by me. I'm enjoying this actually."]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkNervous",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["One more couldn't hurt... "]
+        },
+        {
+            "speaker": "garcello",
+            "speakerAnimation": "talkNervous",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["...Right?"]
+        },
+        {
+            "speaker": "garcello_pico",
+            "speakerAnimation": "uhhh",
+            "box": "garcello",
+            "boxAnimation": "idle",
+
+            "text": ["...Dude"]
+        }
+    ]
+}

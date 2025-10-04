@@ -1,0 +1,21 @@
+{
+    "version": "1.0.0",
+    "name": "Pico (Garcello Week)",
+    "assetPath": "dialogue/pico_norm",
+    "flipX": false,
+    "isPixel": false,
+    "scale": 1,
+    "offsets": [218, -72],
+    "animations": [
+        {
+            "name": "talk",
+            "prefix": "Pico Portrait Enter instance 10000",
+            "frameRate": 12
+        },
+        {
+            "name": "uhhh",
+            "prefix": "Pico Portrait Uhhh",
+            "frameRate": 12
+        }
+    ]
+}

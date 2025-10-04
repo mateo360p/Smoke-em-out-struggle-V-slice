@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="pico_norm.png">
+	<!-- Created copying the BFnorm sprite lol -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Pico Portrait Enter instance 10000" x="0" y="0" width="434" height="263"/>
+	<SubTexture name="Pico Portrait Uhhh" x="434" y="0" width="434" height="263"/>
+</TextureAtlas>
