@@ -1,0 +1,98 @@
+{
+    "props": [
+        {
+            "danceEvery": 0,
+            "name": "bg",
+            "zIndex": 10,
+            "position": [-700, -170],
+            "scale": [1.2, 1.2],
+            "animType": "sparrow",
+            "isPixel": false,
+            "assetPath": "garcelloStage/erect/rise/BG",
+            "alpha": 1,
+            "animations": []
+        },
+        {
+            "danceEvery": 0,
+            "name": "garcelloded",
+            "zIndex": 320,
+            "position": [-550, 40],
+            "scale": [1, 1],
+            "animType": "sparrow",
+            "isPixel": false,
+            "assetPath": "garcelloStage/erect/rise/garded",
+            "scroll": [0.98, 0.98],
+            "alpha": 1,
+            "animations": []
+        },
+        {
+            "danceEvery": 0,
+            "name": "fg",
+            "zIndex": 50,
+            "position": [-700, -170],
+            "scale": [1.2, 1.2],
+            "animType": "sparrow",
+            "isPixel": false,
+            "assetPath": "garcelloStage/erect/rise/FG",
+            "alpha": 1,
+            "animations": []
+        },
+        {
+            "danceEvery": 0,
+            "name": "trashcan",
+            "zIndex": 450,
+            "position": [-700, -170],
+            "scale": [1.2, 1.2],
+            "animType": "sparrow",
+            "isPixel": false,
+            "assetPath": "garcelloStage/erect/rise/trashcan",
+            "alpha": 1,
+            "animations": []
+        },
+        {
+            "danceEvery": 0,
+            "name": "boxes",
+            "zIndex": 480,
+            "position": [-700, -170],
+            "scale": [1.2, 1.2],
+            "animType": "sparrow",
+            "isPixel": false,
+            "assetPath": "garcelloStage/erect/rise/boxes",
+            "alpha": 1,
+            "animations": []
+        },
+        {
+            "danceEvery": 0,
+            "name": "fog",
+            "zIndex": 485,
+            "position": [-700, -170],
+            "scale": [1.2, 1.2],
+            "animType": "sparrow",
+            "isPixel": false,
+            "assetPath": "garcelloStage/erect/rise/fog",
+            "alpha": 1,
+            "animations": []
+        }
+    ],
+    "cameraZoom": 0.8,
+    "version": "1.0.0",
+    "characters": {
+        "bf": {
+            "zIndex": 400,
+            "position": [780, 1000],
+            "cameraOffsets": [-180, -180]
+        },
+        "gf": {
+            "zIndex": 300,
+            "position": [400, 900],
+            "cameraOffsets": [0, -40]
+        },
+        "dad": {
+            "zIndex": 350,
+            "position": [50, 1000],
+            "cameraOffsets": [320, -140]
+        }
+    },
+    "name": "Garcello Alley (Fading Stage) [Erect]",
+    "directory": ""
+}

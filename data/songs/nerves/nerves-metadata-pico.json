@@ -13,6 +13,7 @@
   },
   "playData": {
     "songVariations": [    ],
+    "stickerPack": "garcello-pico",
     "difficulties": [
       "easy",
       "normal",
@@ -31,11 +32,11 @@
         "pico-garcello-smoking"
       ]
     },
-    "stage": "garcelloAlley",
+    "stage": "garcelloAlleyErect",
     "noteStyle": "funkin",
     "ratings": {
       "easy": 3,
-      "hard": 5,
+      "hard": 4,
       "normal": 3
     },
     "album": "garcello-expansion",

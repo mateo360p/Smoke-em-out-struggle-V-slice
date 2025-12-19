@@ -13,6 +13,7 @@
   },
   "playData": {
     "songVariations": ["pico"],
+    "stickerPack": "garcello-default",
     "difficulties": [
       "easy",
       "normal",

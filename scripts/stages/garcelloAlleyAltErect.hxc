@@ -1,0 +1,41 @@
+import flixel.FlxG;
+import funkin.play.stage.Stage;
+import funkin.play.PlayState;
+import funkin.graphics.FunkinSprite;
+import flixel.math.FlxMath;
+import flixel.tweens.misc.VarTween;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.play.character.CharacterType;
+
+class GarcelloAlleyAltErectStage extends Stage
+{
+    function new() {
+        super('garcelloAlleyAltErect');
+    }
+
+    function buildStage() {
+        super.buildStage();
+
+        if (FlxG.onMobile) {
+            var dummySmoker = getNamedProp('smoker2');
+            dummySmoker.scale.set(2.0, 2.0);
+            dummySmoker.updateHitbox();
+            dummySmoker.setPosition(-660, -530);
+        }
+    }
+
+    override function addCharacter(character:BaseCharacter, charType:CharacterType):Void
+    {
+        super.addCharacter(character, charType);
+        trace('Applied stage shader to ' + character.characterName);
+
+        var adjustColor = new AdjustColorShader();
+        adjustColor.hue = -26;
+        adjustColor.saturation = -16;
+        adjustColor.contrast = 0;
+        adjustColor.brightness = -5;
+        character.shader = adjustColor;
+    }
+}

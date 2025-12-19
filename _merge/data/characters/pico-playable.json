@@ -1,0 +1,13 @@
+[
+	{
+		"op": "add",
+		"path": "/animations/-",
+		"value": {
+			"name": "cutscene_fading_SEOS",
+			"prefix": "Pico finds cigarette",
+			"offsets": [45, 15],
+			"frameRate": 20,
+			"assetPath": "characters/pico_finding_cigarette"
+		} 
+	}
+]

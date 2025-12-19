@@ -3,9 +3,23 @@ import funkin.play.PlayState;
 import funkin.play.song.Song;
 import flixel.util.FlxTimer;
 import funkin.play.PlayStatePlaylist;
+import flixel.util.FlxTimer;
+import flixel.util.FlxTimerManager;
+import funkin.audio.FunkinSound;
+import funkin.graphics.FunkinSprite;
 
 class GarcelloFadingSong extends Song {
-    var hasPlayedCutscene:Bool;
+    var hasPlayedCutscene:Bool = false;
+    var hasPlayedEndCutscene:Bool = false;
+    var isInCutscene:Bool = false;
+    var cutsceneTimerManager:FlxTimerManager;
+    var playFunkinCutscene:Bool = false;
+    var dummyPico:FunkinSprite;
+
+    function rollDice() {
+        if (PlayState.instance.currentVariation != 'pico') playFunkinCutscene = false;
+        else playFunkinCutscene = FlxG.random.bool(20);
+    }
 
     public function new() {
         super('fading');
@@ -15,10 +29,33 @@ class GarcelloFadingSong extends Song {
         super.onCreate(event);
 
         hasPlayedCutscene = false;
+        hasPlayedEndCutscene = false;
+        rollDice();
+
+        if (PlayState.instance.currentVariation != 'pico') return;
+        var daPico = PlayState.instance.currentStage.getBoyfriend();
+        dummyPico = FunkinSprite.createSparrow(daPico.x, daPico.y, 'characters/pico_finding_cigarette');
+		dummyPico.animation.addByPrefix('cutscene', 'Pico finds cigarette', 20);
+        dummyPico.offset.set(45, 15);
+        dummyPico.visible = false;
+        dummyPico.zIndex = daPico.zIndex + 1;
+        dummyPico.shader = daPico.shader;
+		PlayState.instance.currentStage.add(dummyPico);
+    }
+
+    function onUpdate(event:UpdateScriptEvent):Void
+    {
+        super.onUpdate(event);
+
+        if (isInCutscene)
+        {
+            if (cutsceneTimerManager != null) cutsceneTimerManager.update(event.elapsed);
+        }
     }
 
     public function onStepHit(event:SongTimeScriptEvent):Void {
-        if (event.step == 240) {
+        var dummyStep = (PlayState.instance.currentVariation == 'pico') ? 272 : 240;
+        if (event.step == dummyStep) {
             new FlxTimer().start(0.1, function(tmr:FlxTimer) // FlxTween? What's that?
             {
                 PlayState.instance.currentStage.getDad().alpha -= 0.05;
@@ -37,12 +74,15 @@ class GarcelloFadingSong extends Song {
         PlayState.instance.currentStage.getDad().alpha = 1;
         PlayState.instance.iconP2.alpha = 1;
         hasPlayedCutscene = true;
+        hasPlayedEndCutscene = false;
+        rollDice();
     }
 
     public function onCountdownStart(event:CountdownScriptEvent):Void {
         super.onCountdownStart(event);
+        var isPico:Bool = (PlayState.instance.currentVariation == 'pico');
 
-        if (!PlayStatePlaylist.isStoryMode) return;
+        if (!(PlayStatePlaylist.isStoryMode || isPico)) return;
 
         if (PlayState.instance.isChartingMode) return;
 
@@ -51,14 +91,66 @@ class GarcelloFadingSong extends Song {
         hasPlayedCutscene = true;
         event.cancel(); // CANCEL THE COUNTDOWN!
 
-        startDialogue();
+        startDialogue(isPico);
     }
 
-    function startDialogue() {
-        PlayState.instance.startConversation('fading');
+    function startDialogue(isPico:Bool) {
+        var s:String = (isPico ? "-pico" : "");
+        PlayState.instance.startConversation('fading' + s);
+    }
+
+    function startEndCutscene() {
+        if (dummyPico == null) {
+            PlayState.instance.endSong();
+            return;
+        }
+
+        cutsceneTimerManager = new FlxTimerManager();
+        // Disable player input during cutscene, so you can't get a gameover during cutscene
+        this.isInCutscene = true;
+        PlayState.instance.isInCutscene = true;
+        PlayState.instance.camHUD.visible = false;
+
+        PlayState.instance.currentStage.getBoyfriend().visible = false;
+
+        dummyPico.animation.play("cutscene", true);
+        dummyPico.visible = true;
+
+        new FlxTimer(cutsceneTimerManager).start(3 / 20, _ -> {
+            FunkinSound.playOnce(Paths.sound('picoFkinNoticingCigarette'), 0.65);
+        });
+
+        new FlxTimer(cutsceneTimerManager).start(60 / 20, _ -> {
+            FunkinSound.playOnce(Paths.sound('picoFkinLookingForCigarette'), 0.8);
+        });
+
+        new FlxTimer(cutsceneTimerManager).start(150 / 20, _ -> {
+            PlayState.instance.endSong(true);
+        });
     }
 
     public override function onDialogueEnd() {
         Countdown.performCountdown();
+    }
+
+    public override function onSongEnd(event:CountdownScriptEvent):Void
+    {
+        super.onSongEnd(event);
+
+        if (!playFunkinCutscene) return;
+        if (!hasPlayedEndCutscene)
+        {
+            hasPlayedEndCutscene = true;
+
+            event.cancel();
+
+            startEndCutscene();
+        }
+        else
+        {
+            // Make sure the cutscene can play again next time!
+            hasPlayedEndCutscene = false;
+            // DO NOT CANCEL THE EVENT!
+        }
     }
 }

@@ -1,0 +1,158 @@
+{
+    "props": [
+        {
+            "danceEvery": 0,
+            "name": "bg",
+            "zIndex": 10,
+            "position": [-700, -170],
+            "scale": [1.2, 1.2],
+            "animType": "sparrow",
+            "isPixel": false,
+            "assetPath": "garcelloStage/erect/alt/BG",
+            "alpha": 1,
+            "animations": []
+        },
+        {
+            "startingAnimation": "idle",
+            "danceEvery": 0,
+            "name": "smoker",
+            "zIndex": 20,
+            "position": [-400, -850],
+            "scale": [2, 2],
+            "animType": "sparrow",
+            "isPixel": false,
+            "assetPath": "garcelloStage/garSmoke",
+            "scroll": [0.82, 0.82],
+            "alpha": 0.6,
+            "animations": [
+                {
+                    "name": "idle",
+                    "offsets": [0, 0],
+                    "prefix": "smokey",
+                    "frameRate": 13,
+                    "flipX": true,
+                    "flipY": false,
+                    "looped": true
+                }
+            ]
+        },
+        {
+            "danceEvery": 0,
+            "name": "garcelloded",
+            "zIndex": 320,
+            "position": [-550, 40],
+            "scale": [1, 1],
+            "animType": "sparrow",
+            "isPixel": false,
+            "assetPath": "garcelloStage/erect/alt/garded",
+            "scroll": [0.98, 0.98],
+            "alpha": 1,
+            "animations": []
+        },
+        {
+            "danceEvery": 0,
+            "name": "fg",
+            "zIndex": 50,
+            "position": [-700, -170],
+            "scale": [1.2, 1.2],
+            "animType": "sparrow",
+            "isPixel": false,
+            "assetPath": "garcelloStage/erect/alt/FG",
+            "alpha": 1,
+            "animations": []
+        },
+        {
+            "danceEvery": 0,
+            "name": "trashcan",
+            "zIndex": 450,
+            "position": [-700, -170],
+            "scale": [1.2, 1.2],
+            "animType": "sparrow",
+            "isPixel": false,
+            "assetPath": "garcelloStage/erect/alt/trashcan",
+            "alpha": 1,
+            "animations": []
+        },
+        {
+            "danceEvery": 0,
+            "name": "boxes",
+            "zIndex": 480,
+            "position": [-700, -170],
+            "scale": [1.2, 1.2],
+            "animType": "sparrow",
+            "isPixel": false,
+            "assetPath": "garcelloStage/erect/alt/boxes",
+            "alpha": 1,
+            "animations": []
+        },
+        {
+            "danceEvery": 0,
+            "name": "fog",
+            "zIndex": 485,
+            "position": [-700, -170],
+            "scale": [1.2, 1.2],
+            "animType": "sparrow",
+            "isPixel": false,
+            "assetPath": "garcelloStage/erect/alt/fog",
+            "alpha": 1,
+            "animations": []
+        },
+        {
+            "startingAnimation": "idle",
+            "danceEvery": 0,
+            "name": "smoker2",
+            "zIndex": 490,
+            "position": [-520, -240],
+            "scale": [1.65, 1.65],
+            "animType": "sparrow",
+            "isPixel": false,
+            "assetPath": "garcelloStage/garSmoke",
+            "scroll": [1.1, 1.1],
+            "alpha": 1,
+            "animations": [
+                {
+                    "name": "idle",
+                    "offsets": [0, 0],
+                    "prefix": "smokey",
+                    "frameRate": 13,
+                    "flipX": true,
+                    "flipY": false,
+                    "looped": true
+                }
+            ]
+        },
+        {
+            "danceEvery": 0,
+            "name": "filter",
+            "zIndex": 500,
+            "position": [-700, -170],
+            "scale": [1.2, 1.2],
+            "animType": "sparrow",
+            "isPixel": false,
+            "assetPath": "garcelloStage/erect/filter",
+            "alpha": 1,
+            "animations": []
+        }
+    ],
+    "cameraZoom": 0.8,
+    "version": "1.0.0",
+    "characters": {
+        "bf": {
+            "zIndex": 400,
+            "position": [780, 1000],
+            "cameraOffsets": [-180, -180]
+        },
+        "gf": {
+            "zIndex": 300,
+            "position": [400, 900],
+            "cameraOffsets": [0, -40]
+        },
+        "dad": {
+            "zIndex": 350,
+            "position": [50, 1000],
+            "cameraOffsets": [320, -140]
+        }
+    },
+    "name": "Garcello Alley (Dead Stage) [Erect]",
+    "directory": ""
+}

@@ -12,7 +12,8 @@
     "altVocals": {    }
   },
   "playData": {
-    "songVariations": [    ],
+    "songVariations": ["pico"],
+    "stickerPack": "garcello-ghost-default",
     "difficulties": [
       "easy",
       "normal",

@@ -1,0 +1,30 @@
+import flixel.FlxG;
+import funkin.play.stage.Stage;
+import funkin.play.PlayState;
+import funkin.graphics.FunkinSprite;
+import flixel.math.FlxMath;
+import flixel.tweens.misc.VarTween;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import funkin.graphics.shaders.AdjustColorShader;
+import funkin.play.character.CharacterType;
+
+class GarcelloAlleyFadingErectStage extends Stage
+{
+    function new() {
+        super('garcelloAlleyFadingErect');
+    }
+
+    override function addCharacter(character:BaseCharacter, charType:CharacterType):Void
+    {
+        super.addCharacter(character, charType);
+        trace('Applied stage shader to ' + character.characterName);
+
+        var adjustColor = new AdjustColorShader();
+        adjustColor.hue = 4;
+        adjustColor.saturation = -7;
+        adjustColor.contrast = 2;
+        adjustColor.brightness = -8;
+        character.shader = adjustColor;
+    }
+}

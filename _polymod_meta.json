@@ -1,5 +1,5 @@
 {
-  "title": "Smoke 'Em Out Struggle - V-Slice Port [v2.1.0]",
+  "title": "Smoke 'Em Out Struggle - V-Slice Port [v3.0.0]",
   "description": "",
   "author": "Dipazio",
   "contributors": [
@@ -17,9 +17,19 @@
       "name": "Plantgamer09",
       "role": "Nerves (Pico Mix) Song",
       "url": "https://gamebanana.com/members/2166559"
+    },
+    {
+      "name": "Relito23_XD",
+      "role": "Garcello 'Erect' Stage",
+      "url": "https://gamebanana.com/members/1942865"
+    },
+    {
+      "name": "InterstellarNuggo",
+      "role": "Release Erect Song",
+      "url": "https://gamebanana.com/members/1977734"
     }
   ],
   "api_version": "0.7.5",
-  "mod_version": "2.1.0",
+  "mod_version": "3.0.0",
   "license": "Apache-2.0"
 }
