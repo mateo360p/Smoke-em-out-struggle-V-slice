@@ -1,5 +1,5 @@
 {
-  "title": "Smoke 'Em Out Struggle - V-Slice Port [v3.0.0]",
+  "title": "Smoke 'Em Out Struggle - V-Slice Port [v3.1.0]",
   "description": "",
   "author": "Dipazio",
   "contributors": [
@@ -10,7 +10,7 @@
     },
     {
       "name": "Pink Lemonade",
-      "role": "Headache (Pico Mix) Song",
+      "role": "Headache (Pico Mix and Erect) Song",
       "url": "https://gamebanana.com/members/1798934"
     },
     {
@@ -30,6 +30,6 @@
     }
   ],
   "api_version": "0.7.5",
-  "mod_version": "3.0.0",
+  "mod_version": "3.1.0",
   "license": "Apache-2.0"
 }

@@ -1,8 +1,8 @@
 {
   "version": "2.2.4",
-  "songName": "Headache",
-  "artist": "atsuover (feat. Rageminer)",
-  "charter": "Unknown",
+  "songName": "Headache Erect",
+  "artist": "Pink Lemonade",
+  "charter": "Dipazio",
   "divisions": 96,
   "looped": false,
   "offsets": {
@@ -12,18 +12,17 @@
     "altVocals": {    }
   },
   "playData": {
-    "songVariations": ["pico", "erect"],
+    "songVariations": [    ],
     "stickerPack": "garcello-default",
     "difficulties": [
-      "easy",
-      "normal",
-      "hard"
+      "erect",
+      "nightmare"
     ],
     "characters": {
       "player": "bf",
       "girlfriend": "gf",
       "opponent": "garcello",
-      "instrumental": "",
+      "instrumental": "erect",
       "altInstrumentals": [      ],
       "opponentVocals": [
         "garcello"
@@ -32,24 +31,23 @@
         "bf"
       ]
     },
-    "stage": "garcelloAlley",
+    "stage": "garcelloAlleyErect",
     "noteStyle": "funkin",
     "ratings": {
-      "easy": 2,
-      "hard": 3,
-      "normal": 2
+      "erect": 8,
+      "nightmare": 9
     },
-    "album": "garcello",
+    "album": "garcello-expansion",
     "previewStart": 0,
     "previewEnd": 15000
   },
-  "generatedBy": "Friday Night Funkin' - v0.7.4",
+  "generatedBy": "Friday Night Funkin' - v0.7.5",
   "timeFormat": "ms",
   "timeChanges": [
     {
       "t": 0,
       "b": 0,
-      "bpm": 120,
+      "bpm": 133,
       "n": 4,
       "d": 4,
       "bt": [
