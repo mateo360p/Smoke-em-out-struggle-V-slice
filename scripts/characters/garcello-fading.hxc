@@ -15,4 +15,18 @@ class GarcelloFadingCharacter extends SparrowCharacter {
 
 		PlayState.instance.healthBar.createFilledBar(garcelloPurpleColor, Constants.COLOR_HEALTH_BAR_GREEN);
 	}
+
+	override function onAnimationFinished(name:String)
+	{
+		super.onAnimationFinished(name);
+		if (name == "NOOOO") {
+			this.playAnimation("smile", true, true);
+		}
+	}
+
+	override function onSongRetry(event:ScriptEvent)
+	{
+		this.canPlayOtherAnims = true;
+		super.onSongRetry();
+	}
 }

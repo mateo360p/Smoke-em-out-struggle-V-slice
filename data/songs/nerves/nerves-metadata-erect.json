@@ -1,8 +1,8 @@
 {
   "version": "2.2.4",
-  "songName": "Fading",
-  "artist": "atsuover (feat. Rageminer)",
-  "charter": "Unknown",
+  "songName": "Nerves Erect",
+  "artist": "LittleJester",
+  "charter": "Dipazio",
   "divisions": 96,
   "looped": false,
   "offsets": {
@@ -12,34 +12,32 @@
     "altVocals": {    }
   },
   "playData": {
-    "songVariations": ["erect", "pico"],
-    "stickerPack": "garcello-ghost-default",
+    "songVariations": [],
+    "stickerPack": "garcello-default",
     "difficulties": [
-      "easy",
-      "normal",
-      "hard"
+      "erect",
+      "nightmare"
     ],
     "characters": {
       "player": "bf",
       "girlfriend": "gf",
-      "opponent": "garcello-fading",
-      "instrumental": "",
+      "opponent": "garcello-tired",
+      "instrumental": "erect",
       "altInstrumentals": [      ],
       "opponentVocals": [
-        "garcello-fading"
+        "garcello-tired"
       ],
       "playerVocals": [
         "bf"
       ]
     },
-    "stage": "garcelloAlleyFading",
+    "stage": "garcelloAlleyErect",
     "noteStyle": "funkin",
     "ratings": {
-      "easy": 2,
-      "hard": 2,
-      "normal": 2
+      "erect": 7,
+      "nightmare": 8
     },
-    "album": "garcello",
+    "album": "garcello-expansion",
     "previewStart": 0,
     "previewEnd": 15000
   },

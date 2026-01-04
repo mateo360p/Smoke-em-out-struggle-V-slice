@@ -1,8 +1,8 @@
 {
   "version": "2.2.4",
-  "songName": "Fading",
-  "artist": "atsuover (feat. Rageminer)",
-  "charter": "Unknown",
+  "songName": "Fading Erect",
+  "artist": "requazar",
+  "charter": "Dipazio",
   "divisions": 96,
   "looped": false,
   "offsets": {
@@ -12,18 +12,17 @@
     "altVocals": {    }
   },
   "playData": {
-    "songVariations": ["erect", "pico"],
+    "songVariations": [],
     "stickerPack": "garcello-ghost-default",
     "difficulties": [
-      "easy",
-      "normal",
-      "hard"
+      "erect",
+      "nightmare"
     ],
     "characters": {
       "player": "bf",
       "girlfriend": "gf",
       "opponent": "garcello-fading",
-      "instrumental": "",
+      "instrumental": "erect",
       "altInstrumentals": [      ],
       "opponentVocals": [
         "garcello-fading"
@@ -32,14 +31,13 @@
         "bf"
       ]
     },
-    "stage": "garcelloAlleyFading",
+    "stage": "garcelloAlleyFadingErect",
     "noteStyle": "funkin",
     "ratings": {
-      "easy": 2,
-      "hard": 2,
-      "normal": 2
+      "erect": 2,
+      "nightmare": 2
     },
-    "album": "garcello",
+    "album": "garcello-expansion",
     "previewStart": 0,
     "previewEnd": 15000
   },
@@ -49,7 +47,7 @@
     {
       "t": 0,
       "b": 0,
-      "bpm": 100,
+      "bpm": 90,
       "n": 4,
       "d": 4,
       "bt": [

@@ -99,6 +99,21 @@
       "looped": false,
       "flipX": false,
       "flipY": false
+    },
+    {
+      "name": "smile",
+      "prefix": "garcello coolguy",
+      "offsets": [
+        0,
+        0
+      ],
+      "frameIndices": [
+        14
+      ],
+      "frameRate": 0,
+      "looped": true,
+      "flipX": false,
+      "flipY": false
     }
   ]
 }

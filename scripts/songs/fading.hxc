@@ -7,6 +7,8 @@ import flixel.util.FlxTimer;
 import flixel.util.FlxTimerManager;
 import funkin.audio.FunkinSound;
 import funkin.graphics.FunkinSprite;
+import funkin.Conductor;
+import funkin.util.ReflectUtil;
 
 class GarcelloFadingSong extends Song {
     var hasPlayedCutscene:Bool = false;
@@ -15,6 +17,24 @@ class GarcelloFadingSong extends Song {
     var cutsceneTimerManager:FlxTimerManager;
     var playFunkinCutscene:Bool = false;
     var dummyPico:FunkinSprite;
+    var fadeTimer:FlxTimer;
+    var fadingErectMap = { // just kill me pleas-
+        s64 : { alpha: 0.4, timeSteps: 4 },
+        s128 : { alpha: 0.75, timeSteps: 52 },
+        s364 : { alpha: 1.0, timeSteps: 16 },
+        s384 : { alpha: 0.82, timeSteps: 4 },
+        s528 : { alpha: 0.35, timeSteps: 48 },
+        s608 : { alpha: 0.58, timeSteps: 10 },
+        s672 : { alpha: 0.2, timeSteps: 16 },
+        s688 : { alpha: 1, timeSteps: 22 },
+        s720 : { alpha: 0.75, timeSteps: 6 },
+        s736 : { alpha: 0.5, timeSteps: 8 },
+        s744 : { alpha: 0.38, timeSteps: 24 },
+        s788 : { alpha: 0, timeSteps: 8}
+    };
+    var PICO_STEP:Int = 272;
+    var BF_STEP:Int = 240;
+    var ERECT_STEP:Int = 64;
 
     function rollDice() {
         if (PlayState.instance.currentVariation != 'pico') playFunkinCutscene = false;
@@ -25,8 +45,13 @@ class GarcelloFadingSong extends Song {
         super('fading');
     }
 
-    function onCreate(event:ScriptEvent):Void {
+    override function onCreate(event:ScriptEvent):Void {
         super.onCreate(event);
+
+        if (PlayState.instance.currentVariation == "erect") {
+            PlayState.instance.currentStage.getDad().alpha = 0;
+            PlayState.instance.iconP2.alpha = 0;
+        }
 
         hasPlayedCutscene = false;
         hasPlayedEndCutscene = false;
@@ -43,36 +68,38 @@ class GarcelloFadingSong extends Song {
 		PlayState.instance.currentStage.add(dummyPico);
     }
 
-    function onUpdate(event:UpdateScriptEvent):Void
-    {
+    override function onUpdate(event:UpdateScriptEvent):Void {
         super.onUpdate(event);
 
-        if (isInCutscene)
-        {
+        if (isInCutscene) {
             if (cutsceneTimerManager != null) cutsceneTimerManager.update(event.elapsed);
         }
     }
 
-    public function onStepHit(event:SongTimeScriptEvent):Void {
-        var dummyStep = (PlayState.instance.currentVariation == 'pico') ? 272 : 240;
-        if (event.step == dummyStep) {
-            new FlxTimer().start(0.1, function(tmr:FlxTimer) // FlxTween? What's that?
-            {
-                PlayState.instance.currentStage.getDad().alpha -= 0.05;
-                PlayState.instance.iconP2.alpha -= 0.05;
+    override function destroy():Void {
+        nullifyTimer();
+        super.destroy();
+    }
 
-                if (PlayState.instance.iconP2.alpha > 0)
-                {
-                    tmr.reset(0.1);
-                }
-            });
-        }
+    override function onStepHit(event:SongTimeScriptEvent):Void {
+        super.onStepHit(event);
+        if (avoidCalcStep(event.step)) return;
+
+        var dummy = calcFadeStep(event.step);
+        if (!dummy.doitbro) return;
+        doRoughFade(dummy.alpha + 0.0, dummy.time);
     }
 
     function onSongRetry(event:ScriptEvent) {
         super.onSongRetry(event);
-        PlayState.instance.currentStage.getDad().alpha = 1;
-        PlayState.instance.iconP2.alpha = 1;
+        nullifyTimer();
+        if (PlayState.instance.currentVariation == "erect") {
+            PlayState.instance.currentStage.getDad().alpha = 0;
+            PlayState.instance.iconP2.alpha = 0;
+        } else {
+            PlayState.instance.currentStage.getDad().alpha = 1;
+            PlayState.instance.iconP2.alpha = 1;
+        }
         hasPlayedCutscene = true;
         hasPlayedEndCutscene = false;
         rollDice();
@@ -152,5 +179,93 @@ class GarcelloFadingSong extends Song {
             hasPlayedEndCutscene = false;
             // DO NOT CANCEL THE EVENT!
         }
+    }
+
+    function doRoughFade(targetAlpha:Float, duration:Float = 2.0) {
+        if (PlayState.instance == null || targetAlpha == null || duration == null) return;
+        var daInterval:Float = 0.1;
+
+        nullifyTimer();
+        fadeTimer = new FlxTimer();
+
+        var icon = PlayState.instance.iconP2;
+        var dad = PlayState.instance.currentStage.getDad();
+
+        var startAlpha = icon.alpha;
+        var delta:Float = targetAlpha - startAlpha;
+
+        if (delta == 0) return; // no changes-
+
+        var steps = Std.int(duration / daInterval);
+        if (steps <= 0) steps = 1;
+
+        var stepAlpha = delta / steps;
+        var daAlpha = targetAlpha;
+        fadeTimer.start(daInterval, function(tmr:FlxTimer) {
+            if (PlayState.instance == null) return;
+
+            icon.alpha += stepAlpha;
+            dad.alpha  += stepAlpha;
+
+            if ((delta > 0 && icon.alpha < daAlpha) || (delta < 0 && icon.alpha > daAlpha))
+                tmr.reset(daInterval);
+            else
+            {
+                icon.alpha = daAlpha;
+                dad.alpha  = daAlpha;
+                currentFadeTarget = null;
+                nullifyTimer();
+            }
+        });
+    }
+
+    function nullifyTimer() {
+        fadeTimer?.cancel();
+        fadeTimer?.destroy();
+        fadeTimer = null;
+    }
+
+    function avoidCalcStep(step:Float):Bool { // to avoid to much processes ig?
+        switch (PlayState.instance.currentVariation) {
+            case "pico":
+                return (step < PICO_STEP);
+            case "erect":
+                return (step < ERECT_STEP);
+            default:
+        }
+        return (step < BF_STEP);
+    }
+
+    function calcFadeStep(step:Float):Dynamic {
+        if (Conductor.instance != null) { // This should not be possible, but, uhhh
+            switch (PlayState.instance.currentVariation) {
+                case "pico":
+                    if (step == 272) return {
+                        doitbro: true,
+                        alpha: 0,
+                        time: 2.0
+                    };
+                case "erect":
+                    var dummy = ReflectUtil.getField(fadingErectMap, 's' + Std.int(step)); // funny
+                    if (dummy != null) {
+                        return {
+                            doitbro: true,
+                            alpha: dummy.alpha,
+                            time: Conductor.instance.getStepTimeInMs(dummy.timeSteps) / 1000
+                        }
+                    };
+                default:
+                    if (step == 240) return {
+                        doitbro: true,
+                        alpha: 0,
+                        time: 2.0
+                    };
+            }
+        }
+        return {
+            doitbro: false,
+            alpha: null,
+            time: null
+        };
     }
 }
