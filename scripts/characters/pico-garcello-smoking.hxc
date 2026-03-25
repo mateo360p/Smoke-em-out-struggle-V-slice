@@ -103,7 +103,7 @@ class PicoGarcelloSmokingCharacter extends MultiSparrowCharacter
     }
   }
 
-  function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
+  public override function playAnimation(name:String, restart:Bool = false, ignoreOther:Bool = false, reversed:Bool = false):Void
   {
     // restore vocal volume to ensure burps always play
     // not needed on the dark variant because this one always exists anyway..
@@ -130,7 +130,7 @@ class PicoGarcelloSmokingCharacter extends MultiSparrowCharacter
       return;
     }
 
-    super.playAnimation(name, restart, ignoreOther);
+    super.playAnimation(name, restart, ignoreOther, reversed);
   }
 
   override function onSongRetry(event:ScriptEvent):Void
@@ -164,7 +164,7 @@ class PicoGarcelloSmokingCharacter extends MultiSparrowCharacter
       // force the deathloop to play in here, since we are starting the music early it
       // doesn't check this in gameover substate !
       // also no animation suffix 🤔
-      GameOverSubState.instance.boyfriend.playAnimation('deathLoop');
+      GameOverSubState.instance.boyfriend.playAnimation('deathLoop', true, false);
     }
 
     // Pico falls on his back.

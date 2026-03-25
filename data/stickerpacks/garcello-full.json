@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "name": "Garcello Week - Full Stickers",
+  "artist": "Dipazio",
+  "stickers": [
+    "transitionSwag/stickerpack-garcello/bfDef/miscSticker1",
+    "transitionSwag/stickerpack-garcello/bfDef/miscSticker2",
+    "transitionSwag/stickerpack-garcello/bfGhost/miscSticker1",
+    "transitionSwag/stickerpack-garcello/bfGhost/ghostSticker1",
+    "transitionSwag/stickerpack-garcello/bfGhost/ghostSticker2",
+    "transitionSwag/stickerpack-garcello/bfGhost/ghostSticker3",
+    "transitionSwag/stickerpack-garcello/bfDef/garcelloSticker1",
+    "transitionSwag/stickerpack-garcello/bfDef/garcelloSticker2",
+    "transitionSwag/stickerpack-garcello/bfDef/garcelloSticker3",
+    "transitionSwag/stickerpack-garcello/picoDef/picoSticker1",
+    "transitionSwag/stickerpack-garcello/picoDef/picoSticker2",
+    "transitionSwag/stickerpack-garcello/picoDef/picoSticker3"
+  ]
+}

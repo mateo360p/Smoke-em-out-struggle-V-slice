@@ -1,5 +1,5 @@
 {
-  "title": "Smoke 'Em Out Struggle - V-Slice Port [v4.0.0]",
+  "title": "Smoke 'Em Out Struggle - V-Slice Port [v4.0.2]",
   "description": "",
   "author": "Dipazio",
   "contributors": [
@@ -39,7 +39,7 @@
       "url": "https://gamebanana.com/members/4092925"
     }
   ],
-  "api_version": "0.8.0",
-  "mod_version": "4.0.0",
+  "api_version": "0.8.2",
+  "mod_version": "4.0.2",
   "license": "Apache-2.0"
 }

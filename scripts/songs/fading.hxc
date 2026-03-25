@@ -163,6 +163,7 @@ class GarcelloFadingSong extends Song {
     public override function onSongEnd(event:CountdownScriptEvent):Void
     {
         super.onSongEnd(event);
+        return;
 
         if (!playFunkinCutscene) return;
         if (!hasPlayedEndCutscene)
